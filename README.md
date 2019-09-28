@@ -62,7 +62,17 @@ buffer.get()   # should return ['d', 'e', 'f']
 
 Navigate into the `names` directory. Here you will find two text files containing 10,000 names each, along with a program `names.py` that compares the two files and prints out duplicate name entries. Try running the code with `python3 names.py`. Be patient because it might take a while: approximately six seconds on my laptop. What is the runtime complexity of this code?
 
+* [ x ] What is runtime complexity? O(n^2)
+
 Six seconds is an eternity so you've been tasked with speeding up the code. Can you get the runtime to under a second? Under one hundredth of a second?
+
+* [ x ] Time increases:
+
+Original time: 6.58 secs
+1st test: 1.36 secs (also O(n^2), but not fully going through second O(n) pass. exiting if confirmed that x in list)
+2nd test: 0.03 secs (sorting both lists, then one linear pass. O(n lg n))
+3rd test: 0.14 secs (convert names_2 into a BST)
+4th test: 0.47 secs (both lists into heaps)
 
 *You may not use the built in Python list or set for this problem*
 
