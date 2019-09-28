@@ -81,6 +81,8 @@ Original time: 6.58 secs
 
 #### Task 3. Reverse a Linked List
 
+* [ x ] Complete the linked list
+
 Inside of the `reverse` directory, you'll find a basic implementation of a Singly Linked List. _Without_ making it a Doubly Linked List (adding a tail attribute), complete the `reverse_list()` function within `reverse/reverse.py` reverse the contents of the list. 
 
 For example,

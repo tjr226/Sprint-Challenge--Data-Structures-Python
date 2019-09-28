@@ -27,6 +27,16 @@ class LinkedList:
     
     self.head = node
 
+  def print(self):
+    node = self.head
+    print(node.value)
+    
+    while node.next_node:
+      node = node.next_node
+      print(node.value)
+
+    return
+
   def contains(self, value):
     if not self.head:
       return False
@@ -43,5 +53,43 @@ class LinkedList:
     return False
 
   def reverse_list(self):
-    # TO BE COMPLETED
-    pass
+    if self.head is None:
+      return
+
+    if self.head.next_node == None:
+      return
+    
+    prev_node = self.head
+    current_node = self.head.next_node
+    next_node = current_node.next_node
+    prev_node.next_node = None
+    
+    while current_node:
+      # print("before starting while loop")
+      self.print()
+      # change pointers
+      current_node.next_node = prev_node
+      self.head = current_node
+
+      # print(f"prev {prev_node.value}, current {current_node.value}, next {next_node.value}")
+      # print("pointers changed in while loop")
+      # self.print()
+      # change vars for next loop
+      prev_node = self.head
+      current_node = next_node
+
+      if current_node.next_node:
+        next_node = current_node.next_node
+
+      if current_node == next_node:
+        break
+    
+      # print(f"prev {prev_node.value}, current {current_node.value}, next {next_node.value}")
+      # break
+
+
+    # prev_node.next_node = None
+    current_node.next_node = prev_node
+    self.head = current_node
+
+    return
