@@ -65,31 +65,45 @@ class LinkedList:
     prev_node.next_node = None
     
     while current_node:
-      # print("before starting while loop")
-      self.print()
-      # change pointers
+      # reverse next_node so it's pointing backwards
       current_node.next_node = prev_node
+      # set head as current node
       self.head = current_node
 
-      # print(f"prev {prev_node.value}, current {current_node.value}, next {next_node.value}")
-      # print("pointers changed in while loop")
-      # self.print()
-      # change vars for next loop
-      prev_node = self.head
-      current_node = next_node
+      # this is needed for lists of length 2
+      if next_node == None:
+        break
 
+      # reset vars for next loop
+      # move prev_node up one
+      prev_node = self.head
+      # set current_node as the saved next_node
+      current_node = next_node
+      # these next two statements are both needed
+      # move the next node, assuming there is one
       if current_node.next_node:
         next_node = current_node.next_node
 
+      # if there is no next node, break
       if current_node == next_node:
         break
-    
-      # print(f"prev {prev_node.value}, current {current_node.value}, next {next_node.value}")
-      # break
 
-
-    # prev_node.next_node = None
+    # do the final pointer switches - needed because it's not done the final time through the loop
     current_node.next_node = prev_node
     self.head = current_node
 
     return
+
+test_list = LinkedList()
+
+test_list.add_to_head(1)
+test_list.add_to_head(2)
+test_list.add_to_head(3)
+test_list.add_to_head(4)
+test_list.add_to_head(5)
+
+test_list.print()
+
+test_list.reverse_list()
+print("list is reversed")
+test_list.print()
