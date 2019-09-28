@@ -13,27 +13,29 @@ f.close()
 
 duplicates = []
 
+
+
 # fourth attempt code, heap
-names_1_heap = Heap()
-names_2_heap = Heap()
+# names_1_heap = Heap()
+# names_2_heap = Heap()
 
-for i in names_1:
-    names_1_heap.insert(i)
-for j in names_2:
-    names_2_heap.insert(j)
+# for i in names_1:
+#     names_1_heap.insert(i)
+# for j in names_2:
+#     names_2_heap.insert(j)
 
-i_max = names_1_heap.get_max()
-j_max = names_2_heap.get_max()
+# i_max = names_1_heap.get_max()
+# j_max = names_2_heap.get_max()
 
-while i_max is not None and j_max is not None:
-    if i_max == j_max:
-        duplicates.append(i_max)
-        i_max = names_1_heap.delete()
-        j_max = names_2_heap.delete()
-    elif i_max < j_max:
-        j_max = names_2_heap.delete()
-    elif j_max < i_max:
-        i_max = names_1_heap.delete()
+# while i_max is not None and j_max is not None:
+#     if i_max == j_max:
+#         duplicates.append(i_max)
+#         i_max = names_1_heap.delete()
+#         j_max = names_2_heap.delete()
+#     elif i_max < j_max:
+#         j_max = names_2_heap.delete()
+#     elif j_max < i_max:
+#         i_max = names_1_heap.delete()
 
 
 

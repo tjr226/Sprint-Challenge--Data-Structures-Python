@@ -20,9 +20,9 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 This Sprint Challenge is split into three parts:
 
-1. [ ] Implement a data structure called a ring buffer (more details below)
-2. [ ] Optimizing some inefficient code
-3. [ ] Reversing the contents of a singly linked list
+1. [ x ] Implement a data structure called a ring buffer (more details below)
+2. [ x ] Optimizing some inefficient code
+3. [ x ] Reversing the contents of a singly linked list
 
 ### Minimum Viable Product
 
@@ -72,7 +72,7 @@ Original time: 6.58 secs
 1st test: 1.36 secs (also O(n^2), but not fully going through second O(n) pass. exiting if confirmed that x in list)
 2nd test: 0.03 secs (sorting both lists, then one linear pass. O(n lg n))
 3rd test: 0.14 secs (convert names_2 into a BST)
-4th test: 0.47 secs (both lists into heaps)
+4th test: STRETCH 0.47 secs (both lists into heaps)
 
 *You may not use the built in Python list or set for this problem*
 
